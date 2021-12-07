@@ -20,6 +20,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'javax.xml.bind:jaxb-api:2.2.3'
 	implementation("org.hibernate:hibernate-core:5.6.1.Final")
+	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-hal-explorer
+	implementation 'org.springframework.data:spring-data-rest-hal-explorer:3.6.0'
+
 
 
 }

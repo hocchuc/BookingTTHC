@@ -9,9 +9,13 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "booking", path = "booking")
 public interface BookingRepository extends PagingAndSortingRepository<Booking, Long> {
+
     List<Booking> findByFullName(@Param("fullName") String fullName);
 
     Booking findById(long id);
 
+    List<Booking> findByIdentityCard(@Param("identityCard") String identityCard);
 
+    @Override
+    <S extends Booking> S save(S entity);
 }
